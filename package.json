@@ -1,0 +1,45 @@
+{
+  "name": "zod-extras",
+  "description": "Extra utilities for creating a Zod schema",
+  "version": "0.0.0",
+  "type": "module",
+  "types": "./types/index.d.ts",
+  "exports": {
+    "import": "./src/index.js",
+    "types": "./types/index.d.ts"
+  },
+  "peerDependencies": {
+    "zod": "*"
+  },
+  "files": [
+    "src",
+    "types",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "dts-buddy",
+    "test": "node test/test.js",
+    "prepublishOnly": "npm test && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duailibe/zod-extras.git"
+  },
+  "keywords": [
+    "zod"
+  ],
+  "author": "Lucas Duailibe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/duailibe/zod-extras/issues"
+  },
+  "homepage": "https://github.com/duailibe/zod-extras#readme",
+  "devDependencies": {
+    "dts-buddy": "^0.1.7",
+    "typescript": "^5.1.6",
+    "zod": "^3.21.4"
+  },
+  "dependencies": {
+    "just-map-values": "^3.2.0"
+  }
+}
