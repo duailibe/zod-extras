@@ -1,7 +1,7 @@
 {
   "name": "zod-extras",
   "description": "Extra utilities for creating a Zod schema",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "types": "./types/index.d.ts",
   "exports": {
