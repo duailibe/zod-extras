@@ -1,0 +1,7 @@
+declare module 'zod-extras' {
+	import * as z from 'zod';
+	export function zformdata<T extends z.ZodRawShape>(schema: T): z.ZodPipeline<z.ZodType<any, z.ZodTypeDef, any>, z.ZodEffects<z.ZodObject<T, "strip", z.ZodTypeAny, { [k_1 in keyof z.objectUtil.addQuestionMarks<z.baseObjectOutputType<T>, { [k in keyof z.baseObjectOutputType<T>]: undefined extends z.baseObjectOutputType<T>[k] ? never : k; }[keyof T]>]: z.objectUtil.addQuestionMarks<z.baseObjectOutputType<T>, { [k_2 in keyof z.baseObjectOutputType<T>]: undefined extends z.baseObjectOutputType<T>[k_2] ? never : k_2; }[keyof T]>[k_1]; }, { [k_2 in keyof z.baseObjectInputType<T>]: z.baseObjectInputType<T>[k_2]; }>, { [k_1 in keyof z.objectUtil.addQuestionMarks<z.baseObjectOutputType<T>, { [k in keyof z.baseObjectOutputType<T>]: undefined extends z.baseObjectOutputType<T>[k] ? never : k; }[keyof T]>]: z.objectUtil.addQuestionMarks<z.baseObjectOutputType<T>, { [k_2 in keyof z.baseObjectOutputType<T>]: undefined extends z.baseObjectOutputType<T>[k_2] ? never : k_2; }[keyof T]>[k_1]; }, unknown>>;
+	export function zjsonstring<T extends z.ZodTypeAny>(schema?: T | undefined): z.ZodEffects<z.ZodString, any, string> | z.ZodPipeline<z.ZodEffects<z.ZodString, any, string>, T>;
+}
+
+//# sourceMappingURL=index.d.ts.map

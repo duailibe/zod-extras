@@ -1,0 +1,17 @@
+{
+	"version": 3,
+	"file": "index.d.ts",
+	"names": [
+		"zformdata",
+		"zjsonstring"
+	],
+	"sources": [
+		"../src/formdata.js",
+		"../src/jsonstring.js"
+	],
+	"sourcesContent": [
+		null,
+		null
+	],
+	"mappings": ";;iBAOgBA,SAASA;iBCDTC,WAAWA"
+}

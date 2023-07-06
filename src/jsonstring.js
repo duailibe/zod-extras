@@ -3,6 +3,7 @@ import * as z from "zod";
 /**
  * @template {z.ZodTypeAny} T
  * @param {T=} schema
+ * @returns {T extends undefined ? z.ZodEffects<z.ZodString, any, string> : z.ZodPipeline<z.ZodEffects<z.ZodString, any, string>, T>}
  */
 export function zjsonstring(schema) {
   const validateJson = z.string().transform((val, ctx) => {
@@ -18,5 +19,5 @@ export function zjsonstring(schema) {
     }
   });
 
-  return schema ? validateJson.pipe(schema) : validateJson;
+  return /** @type {any} */ (schema ? validateJson.pipe(schema) : validateJson);
 }
