@@ -5,8 +5,8 @@
   "type": "module",
   "types": "./types/index.d.ts",
   "exports": {
-    "import": "./src/index.js",
-    "types": "./types/index.d.ts"
+    "types": "./types/index.d.ts",
+    "default": "./src/index.js"
   },
   "peerDependencies": {
     "zod": "*"
@@ -17,9 +17,8 @@
     "README.md"
   ],
   "scripts": {
-    "build": "dts-buddy",
     "test": "node test/test.js",
-    "prepublishOnly": "npm test && npm run build"
+    "prepublishOnly": "tsc"
   },
   "repository": {
     "type": "git",
@@ -35,7 +34,6 @@
   },
   "homepage": "https://github.com/duailibe/zod-extras#readme",
   "devDependencies": {
-    "dts-buddy": "^0.1.7",
     "typescript": "^5.1.6",
     "zod": "^3.21.4"
   },
